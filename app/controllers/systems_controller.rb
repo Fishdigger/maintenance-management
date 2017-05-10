@@ -19,7 +19,7 @@ class SystemsController < ApplicationController
   end
 
   def show()
-
+    @system = System.find(params[:id])
   end
 
   def update()

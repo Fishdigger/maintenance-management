@@ -1,1 +1,15 @@
-<h1>Show System</h1>
+<div class="col-md-4 col-md-offset-4">
+  <p class="text-center"><strong>Name: </strong><%= @system.name %></p>
+  <p class="text-center"><strong>Family: </strong><%= @system.family %></p>
+  <p class="text-center"><strong>Part Number: </strong><%= @system.part_number %></p>
+  <p class="text-center"><strong>Serial Number: </strong><%= @system.serial_number %></p>
+  <p class="text-center"><strong>Vendor ID: </strong><%= @system.vendor_id %></p>
+  <p class="text-center"><strong>Cost: </strong><%= @system.cost %></p>
+  <p class="text-center"><strong>Location: </strong><%= @system.location %></p>
+  <p class="text-center"><strong>Install Date: </strong><%= @system.install_date %></p>
+  <p class="text-center">
+    <%= link_to "Done", systems_path, class: "btn btn-success" %>
+    <%= link_to "Edit", edit_system_path(@system.id), class: "btn btn-warning" %>
+    <%= link_to "Add Another System", new_system_path, class: "btn btn-primary" %>
+  </p>
+</div>
