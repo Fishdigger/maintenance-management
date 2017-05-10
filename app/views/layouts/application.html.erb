@@ -13,23 +13,10 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse"
-          data-target="#top-navbar-collapse">
-          <span class="sr-only">Toggle Navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
         <%= link_to "Home", {controller: "home", action: "index"}, class: "navbar-brand" %>
         </div>
         <div class="collapse navbar-collapse" id="top-navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Preventive Maintenance", {controller: "preventive_maintenance",
-              action: "index"} %></li>
-            <li><%= link_to "Work Orders", {controller: "work_order", action: "index"} %></li>
-            <li><%= link_to "Equipment Management", {controller: "equipment", action: "index"} %></li>
-            <li><%= link_to "Parts Management", {controller: "parts", action: "index"} %></li>
-            <li><%= link_to "Reports", {controller: "reports", action: "index"} %></li>
           </ul>
         </div>
       </div>
