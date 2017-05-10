@@ -1,25 +1,31 @@
-<%= form_for :system, url: systems_path do |f| %>
-  <div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+<h1 class="text-center display-3">Add New System</h1>
+<div class="container-fluid">
+  <div class="col-md-4 col-md-offset-4">
+  <%= form_for :system, url: systems_path do |f| %>
+    <div class="form-group">
+      <%= f.label :name, :class => "control-label" %>
+      <%= f.text_field :name, :class => "form-control" %>
 
-    <%= f.label :family %>
-    <%= f.text_field :family %>
+      <%= f.label :family, :class => "control-label" %>
+      <%= f.text_field :family, :class => "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :part_number, :class => "control-label" %>
+      <%= f.text_field :part_number, :class => "form-control" %>
+      <%= f.label :serial_number, :class => "control-label" %>
+      <%= f.text_field :serial_number, :class => "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :vendor_id, :class => "control-label" %>
+      <%= f.text_field :vendor_id, :class => "form-control" %>
 
-    <%= f.label :part_number %>
-    <%= f.text_field :part_number %>
-    <%= f.label :serial_number %>
-    <%= f.text_field :serial_number %>
+      <%= f.label :install_date, :class => "control-label"%>
+      <%= f.date_field :install_date, :class => "form-control" %>
 
-    <%= f.label :vendor_id %>
-    <%= f.text_field :vendor_id %>
-
-    <%= f.label :install_date %>
-    <%= f.date_field :install_date %>
-
-    <%= f.label :cost %>
-    <%= f.number_field :cost, step: 0.01 %>
-
-    <%= f.submit %>
-<% end %>
+      <%= f.label :cost, :class => "control-label" %>
+      <%= f.number_field :cost, :class => "form-control" %>
+    </div>
+      <%= f.submit "Save System", :class => "btn btn-primary form-control" %>
+  <% end %>
   </div>
+</div>
