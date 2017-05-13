@@ -5,17 +5,20 @@ class SystemsController < ApplicationController
   end
 
   def new()
-
+    @system = System.new
   end
 
   def create()
     @system = System.new(system_params)
-    @system.save
-    redirect_to @system
+    if @system.save
+      redirect_to @system
+    else
+      render 'new'
+    end
   end
 
   def edit()
-
+    @system = System.find(params[:id])
   end
 
   def show()
@@ -23,11 +26,18 @@ class SystemsController < ApplicationController
   end
 
   def update()
-
+    @system = System.find(params[:id])
+    if @system.update(system_params)
+      redirect_to @system
+    else
+      render 'edit'
+    end
   end
 
   def destroy()
-
+    @system = System.find(params[:id])
+    @system.destroy
+    redirect_to systems_path
   end
 
   private
