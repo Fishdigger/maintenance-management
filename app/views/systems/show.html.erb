@@ -9,7 +9,9 @@
   <p class="text-center"><strong>Install Date: </strong><%= @system.install_date %></p>
   <p class="text-center">
     <%= link_to "Done", systems_path, class: "btn btn-success" %>
-    <%= link_to "Edit", edit_system_path(@system.id), class: "btn btn-warning" %>
+    <%= link_to "Edit", edit_system_path(@system.id), class: "btn btn-info" %>
     <%= link_to "Add Another System", new_system_path, class: "btn btn-primary" %>
+    <%= link_to "DELETE", system_path(@system.id), method: :delete,
+      data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
   </p>
 </div>
