@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170509224748) do
+ActiveRecord::Schema.define(version: 20170513231434) do
+
+  create_table "parts", force: :cascade do |t|
+    t.string   "part_number"
+    t.integer  "vendor_id"
+    t.integer  "on_hand"
+    t.integer  "threshold"
+    t.string   "order_url"
+    t.decimal  "cost"
+    t.string   "unit_of_issue"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "name"
+  end
 
   create_table "systems", force: :cascade do |t|
     t.string   "part_number"

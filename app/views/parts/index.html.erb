@@ -1,0 +1,36 @@
+<div class="col-md-8 col-md-offset-2">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name/Description</th>
+        <th>Part Number</th>
+        <th>Unit of Issue</th>
+        <th>Quantity On Hand</th>
+        <th>Order Threshold</th>
+        <th>Order URL</th>
+        <th>Cost</th>
+        <th>Vendor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @parts.each do |part| %>
+      <tr>
+        <td><%= link_to part.name, part_path(part) %></td>
+        <td><%= part.part_number %></td>
+        <td><%= part.unit_of_issue %></td>
+        <td><%= part.on_hand %></td>
+        <td><%= part.threshold %></td>
+        <td><%= link_to "Order More", part.order_url %></td>
+        <td><%= part.cost %></td>
+        <td><%= part.vendor_id %></td>
+        <td><%= link_to "Edit", edit_part_path(part), class: "btn btn-info" %></td>
+        <td><%= link_to "Delete", part_path(part), method: :delete,
+          data: {confirm: "Are you sure?" }, class: "btn btn-danger" %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <p class="text-center">
+    <%= link_to "Add New Part", new_part_path, class: "btn btn-primary" %>
+  </p>
+</div>
