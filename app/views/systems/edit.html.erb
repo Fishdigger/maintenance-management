@@ -21,7 +21,7 @@
       </div>
       <div class="form-group">
         <%= f.label :vendor_id, :class => "control-label" %>
-        <%= f.text_field :vendor_id, :value => @system.vendor_id, :class => "form-control" %>
+        <%= f.number_field :vendor_id, :value => @system.vendor_id, :class => "form-control" %>
 
         <%= f.label :install_date, :class => "control-label" %>
         <%= f.date_field :install_date, :value => @system.install_date, :class => "form-control" %>

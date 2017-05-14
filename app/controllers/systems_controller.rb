@@ -43,7 +43,7 @@ class SystemsController < ApplicationController
   private
   def system_params()
     params.require(:system).permit(:name, :serial_number, :part_number,
-      :family, :vendor, :install_date, :cost)
+      :family, :vendor, :location, :install_date, :cost)
   end
 
 end
