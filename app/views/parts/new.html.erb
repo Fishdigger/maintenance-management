@@ -17,7 +17,7 @@
         <%= f.number_field :on_hand, :class => "form-control" %>
 
         <%= f.label :threshold, :class => "control-label" %>
-        <%= f.number_field :threshold, :class => "control-label" %>
+        <%= f.number_field :threshold, :class => "form-control" %>
       </div>
       <div class="form-group">
         <%= f.label :order_url, :class => "control-label" %>
@@ -29,6 +29,7 @@
         <%= f.label :vendor_id, :class => "control-label" %>
         <%= f.number_field :vendor_id, :class => "form-control" %>
       </div>
+      <%= f.submit "Save Part", :class => "btn btn-primary form-control" %>
     <% end %>
   </div>
 </div>
