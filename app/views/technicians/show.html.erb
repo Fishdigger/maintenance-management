@@ -1,0 +1,14 @@
+<div class="col-md-4 col-md-offset-4">
+  <p class="text-center"><strong>Name: </strong><%= @technician.name %></p>
+  <p class="text-center"><strong>Employee Number: </strong><%= @technician.employee_number %></p>
+  <p class="text-center"><strong>Payrate: </strong><%= @technician.payrate %></p>
+  <p class="text-center"><strong>Location: </strong><%= @technician.location %></p>
+  <p class="text-center"><strong>Role: </strong><%= @technician.role %></p>
+  <p class="text-center">
+    <%= link_to "Done", technicians_path, class: "btn btn-success" %>
+    <%= link_to "Edit", edit_technician_path(@technician.id), class: "btn btn-info" %>
+    <%= link_to "Add Another Technician", new_technician_path, class: "btn btn-primary" %>
+    <%= link_to "DELETE", technician_path(@technician.id), method: :delete,
+      data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+  </p>
+</div>
