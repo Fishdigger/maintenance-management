@@ -1,10 +1,13 @@
 class PartsController < ApplicationController
+
   def index()
     @parts = Part.all
   end
+
   def new()
     @part = Part.new
   end
+
   def create()
     @part = Part.new(part_params)
     if @part.save
@@ -13,12 +16,15 @@ class PartsController < ApplicationController
       render 'new'
     end
   end
+
   def show()
     @part = Part.find(params[:id])
   end
+
   def edit()
     @part = Part.find(params[:id])
   end
+
   def update()
     @part = Part.find(params[:id])
     if @part.update(part_params)
@@ -27,6 +33,7 @@ class PartsController < ApplicationController
       render 'edit'
     end
   end
+
   def destroy()
     @part = Part.find(params[:id])
     @part.destroy
