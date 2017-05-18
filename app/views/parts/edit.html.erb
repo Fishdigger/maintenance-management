@@ -26,7 +26,7 @@
         <%= f.text_field :order_url, :value => @part.order_url, :class => "form-control" %>
 
         <%= f.label :cost, :class => "control-label" %>
-        <%= f.number_field :cost, :value => @part.cost, :class => "form-control" %>
+        <%= f.number_field :cost, :value => @part.cost, :class => "form-control", :step => 0.01 %>
 
         <%= f.label :vendor_id, :class => "control-label" %>
         <%= f.number_field :vendor_id, :value => @part.vendor_id, :class => "form-control" %>
