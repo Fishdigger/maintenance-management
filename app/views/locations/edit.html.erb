@@ -1,0 +1,23 @@
+<h1 class="text-center display-3">Edit Location</h1>
+<div class="container-fluid">
+  <div class="col-md-4 col-md-offset-4">
+    <%= form_for @location do |f| %>
+      <div class="form-group">
+        <%= f.label :nickname, :class => "control-label" %>
+        <%= f.text_field :nickname, :value => @location.nickname, :class => "form-control" %>
+        <%= f.label :street, :class => "control-label" %>
+        <%= f.text_field :street, :value => @location.street, :class => "form-control" %>
+
+        <%= f.label :city, :class => "control-label" %>
+        <%= f.text_field :city, :value => @location.city, :class => "form-control" %>
+
+        <%= f.label :state, :class => "control-label" %>
+        <%= f.text_field :state, :value => @location.state, :class => "form-control" %>
+
+        <%= f.label :zip, :class => "control-label" %>
+        <%= f.text_field :zip, :value => @location.zip, :class => "form-control" %>
+      </div>
+      <%= f.submit "Save Location", :class => "btn btn-primary form-control" %>
+    <% end %>
+  </div>
+</div>
