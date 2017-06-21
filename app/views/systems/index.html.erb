@@ -21,7 +21,7 @@
         <td><%= sys.serial_number %></td>
         <td><%= sys.vendor_id %></td>
         <td><%= sys.cost %></td>
-        <td><%= sys.location %></td>
+        <td><%= sys.location.nickname %></td>
         <td><%= sys.install_date %></td>
         <td><%= link_to "Edit", edit_system_path(sys), class: "btn btn-info" %></td>
         <td><%= link_to "Delete", system_path(sys), method: :delete,

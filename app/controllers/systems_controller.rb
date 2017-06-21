@@ -6,6 +6,7 @@ class SystemsController < ApplicationController
 
   def new()
     @system = System.new
+    @location = Location.all
   end
 
   def create()
