@@ -5,7 +5,7 @@
   <p class="text-center"><strong>Serial Number: </strong><%= @system.serial_number %></p>
   <p class="text-center"><strong>Vendor ID: </strong><%= @system.vendor_id %></p>
   <p class="text-center"><strong>Cost: </strong><%= @system.cost %></p>
-  <p class="text-center"><strong>Location: </strong><%= @system.location %></p>
+  <p class="text-center"><strong>Location: </strong><%= @system.location.nickname %></p>
   <p class="text-center"><strong>Install Date: </strong><%= @system.install_date %></p>
   <p class="text-center">
     <%= link_to "Done", systems_path, class: "btn btn-success" %>
