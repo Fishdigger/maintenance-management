@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170621033350) do
+ActiveRecord::Schema.define(version: 20170622000611) do
 
   create_table "locations", force: :cascade do |t|
     t.string   "street"
@@ -59,10 +59,10 @@ ActiveRecord::Schema.define(version: 20170621033350) do
     t.string   "name"
     t.string   "employee_number"
     t.decimal  "payrate"
-    t.string   "location"
-    t.string   "role"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "location_id"
+    t.integer  "role_id"
   end
 
 end

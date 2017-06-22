@@ -7,7 +7,7 @@
         <%= f.text_field :name, :value => @system.name, :class => "form-control" %>
 
         <%= f.label :location_id, :class =>"control-label" %>
-        <%= f.select(:location_id, @locations.all.collect { |l| [l.nickname, l.id] }, :class => "form-control custom-select", :value => @system.location_id) %>
+        <%= f.select(:location_id, @locations.all.collect { |l| [l.nickname, l.id] }, {}, { :class => "form-control custom-select", :value => @system.location_id }) %>
 
         <%= f.label :family, :class => "control-label" %>
         <%= f.text_field :family, :value => @system.family, :class => "form-control" %>
