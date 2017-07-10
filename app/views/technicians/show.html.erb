@@ -2,8 +2,8 @@
   <p class="text-center"><strong>Name: </strong><%= @technician.name %></p>
   <p class="text-center"><strong>Employee Number: </strong><%= @technician.employee_number %></p>
   <p class="text-center"><strong>Payrate: </strong><%= @technician.payrate %></p>
-  <p class="text-center"><strong>Location: </strong><%= @technician.location %></p>
-  <p class="text-center"><strong>Role: </strong><%= @technician.role %></p>
+  <p class="text-center"><strong>Location: </strong><%= @technician.location.nickname %></p>
+  <p class="text-center"><strong>Role: </strong><%= @technician.role.name %></p>
   <p class="text-center">
     <%= link_to "Done", technicians_path, class: "btn btn-success" %>
     <%= link_to "Edit", edit_technician_path(@technician.id), class: "btn btn-info" %>

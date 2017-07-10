@@ -6,6 +6,8 @@ class TechniciansController < ApplicationController
 
   def new()
     @technician = Technician.new
+    @locations = Location.all
+    @roles = Role.all
   end
 
   def create()
@@ -23,6 +25,8 @@ class TechniciansController < ApplicationController
 
   def edit()
     @technician = Technician.find(params[:id])
+    @locations = Location.all
+    @roles = Role.all
   end
 
   def update()
@@ -42,8 +46,8 @@ class TechniciansController < ApplicationController
 
   private
   def technician_params()
-    params.require(:technician).permit(:name, :payrate, :location,
-      :role, :employee_number)
+    params.require(:technician).permit(:name, :payrate, :location_id,
+      :role_id, :employee_number)
   end
 
 end

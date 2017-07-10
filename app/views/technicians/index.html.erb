@@ -15,8 +15,10 @@
         <td><%= link_to tech.name, technician_path(tech.id) %></td>
         <td><%= tech.employee_number %></td>
         <td><%= tech.payrate %></td>
-        <td><%= tech.location %></td>
-        <td><%= tech.role %></td>
+        <td><%= tech.location.nickname %></td>
+        <td><%= tech.role.name %></td>
+        <td><%= link_to "Edit", edit_technician_path(tech), class: "btn btn-info"%></td>
+        <td><%= link_to "Delete", technician_path(tech), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %></td>
       </tr>
       <% end %>
     </tbody>

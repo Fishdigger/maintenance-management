@@ -28,6 +28,9 @@
 
       <%= f.label :cost, :class => "control-label" %>
       <%= f.number_field :cost, :class => "form-control" %>
+
+      <%= f.label :location_id, :class => "control-label" %>
+      <%= f.select(:location_id, @locations.all.collect { |l| [l.nickname, l.id] }, {}, { :class => "form-control custom-select" }) %>
     </div>
       <%= f.submit "Save System", :class => "btn btn-primary form-control" %>
   <% end %>

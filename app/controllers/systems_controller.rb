@@ -6,6 +6,7 @@ class SystemsController < ApplicationController
 
   def new()
     @system = System.new
+    @locations = Location.all
   end
 
   def create()
@@ -19,6 +20,7 @@ class SystemsController < ApplicationController
 
   def edit()
     @system = System.find(params[:id])
+    @locations = Location.all
   end
 
   def show()
@@ -43,7 +45,7 @@ class SystemsController < ApplicationController
   private
   def system_params()
     params.require(:system).permit(:name, :serial_number, :part_number,
-      :family, :vendor_id, :location, :install_date, :cost)
+      :family, :vendor_id, :location_id, :install_date, :cost)
   end
 
 end
